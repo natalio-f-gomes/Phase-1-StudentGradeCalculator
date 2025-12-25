@@ -1,12 +1,15 @@
-package com.example;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
 
+package com.mycompany.studentgradecalculator;
 import java.util.Scanner;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class StudentGradeCalculator 
 {
     public static void main( String[] args )
     {

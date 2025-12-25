@@ -1,6 +1,10 @@
-package com.example;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.studentgradecalculator;
 
-import javax.swing.*;
+
 
 public class Student {
     private String name;
@@ -78,35 +82,24 @@ public class Student {
     }
 
     public void printTable(){
-        int len = getBiggestCourseName();
-        StringBuilder spaces = new StringBuilder();
-        if(len>7){
-            int num = len - 7;
-            for(int i=0;i<num; i++){
-                spaces.append(" ");
-            }
-        }
+      
 
         System.out.println("=====================================================================================");
         System.out.println(this.name +" Curriculum:");
-        System.out.println("Courses" + spaces + "|| Grade " + " || Letter Grade "+ " || Grade Points" + " || Credit Hours" + " || Quality Points");
         for(int i=0;i<this.classes.length;i++){
             String letterGrade = getGrade(this.grades[i]);
-            System.out.println(this.classes[i] + spaces + " || " + this.grades[i] + " || " + letterGrade + " || " + this.gradePoints[i] + " || " + this.creditHours[i] + " || " + this.qualityPoints[i]);
+            System.out.println("Course: "+ this.classes[i] 
+                    + "\n\t Grade:" + this.grades[i] 
+                    + "\n\t Letter Grade:" + letterGrade
+                    + "\n\t Grade Points:"  + this.gradePoints[i]
+                    + "\n\t Credit Hours:" + this.creditHours[i] 
+                    + "\n\t Quality points :"+ this.qualityPoints[i]);
         }
         System.out.println("Average Grade " + getAvgGrade());
         System.out.println("Student GPA " + CalculateGPA());
         System.out.println("=====================================================================================");
     }
 
-    public int getBiggestCourseName(){
-        String biggest = "";
-        for (String i: this.classes){
-            if(i.length() > biggest.length()){
-                biggest = i;
-            }
-        }
-        return biggest.length();
-    }
+ 
 
 }
